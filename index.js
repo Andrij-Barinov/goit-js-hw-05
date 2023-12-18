@@ -1,481 +1,696 @@
 // ❗ ЗАДАЧА #1
 
-// Дополни цикл for так, чтобы он логировал все целые числа в диапазоне от start до end включительно.
+// Присвой переменной apartment объект описывающий квартиру со следующими характеристиками:
+
+// imgUrl - фотография, значение "https://via.placeholder.com/640x480";
+// descr - описание, значение "Spacious apartment in the city center";
+// rating - рейтинг, значение 4;
+// price - цена, значение 2153;
+// tags - метаинформация, массив ["premium", "promoted", "top"].
 
 // ТЕСТЫ
 
-// ✅ Объявлена переменная start
-// ✅ Значение переменной start это число 3
-// ✅ Объявлена переменная end
-// ✅ Значение переменной end это число 7
-// ✅ Объявлена переменная i - счётчик цикла
-// ✅ Начальное значение переменной i равно 3
-// ✅ Условие цикла приводится к true до тех пор, пока i меньше либо равно 7
-// ✅ На каждой итерации значение переменной i увеличивается на единицу
-// ✅ Вывод в консоль переменной i покажет числа 3, 4, 5, 6, 7
+// ✅ Объявлена переменная apartment
+// ✅ Значение переменной apartment это объект
+// ✅ В объекте есть свойство imgUrl
+// ✅ Значение свойства imgUrl это строка "https://via.placeholder.com/640x480"
+// ✅ В объекте есть свойство descr
+// ✅ Значение свойства descr это строка "Spacious apartment in the city center"
+// ✅ В объекте есть свойство rating
+// ✅ Значение свойства rating это число 4
+// ✅ В объекте есть свойство price
+// ✅ Значение свойства price это число 2153
+// ✅ В объекте есть свойство tags
+// ✅ Значение свойства tags это массив ["premium", "promoted", "top"]
 
 
-// const start = 3;
-// const end = 7;
-// for (let i = start; i <= end; i += 1) {
-//   console.log(i);
-// }
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"]
+// };
+// console.log(apartment);
 
 
 
 // ❗ ЗАДАЧА #2
 
-// Напиши функцию calculateTotal(number), которая принимает целое число (параметр number) и возвращает сумму всех целых чисел от единицы и до этого числа. Например, если number равно 3, то сумма это 1 + 2 + 3, то есть 6.
+// Дополни объект квартиры свойством owner, значением которого будет объект с информацией о владельце. Добавь ему следующие свойства:
+
+// name - имя владельца, значение "Henry";
+// phone - телефон, значение "982-126-1588";
+// email - почта, значение "henry.carter@aptmail.com".
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция calculateTotal(number)
-// ✅ Вызов функции calculateTotal(1) возвращает 1
-// ✅ Вызов функции calculateTotal(3) возвращает 6
-// ✅ Вызов функции calculateTotal(7) возвращает 28
-// ✅ Вызов функции calculateTotal(18) возвращает 171
-// ✅ Вызов функции calculateTotal(24) возвращает 300
-// ✅ Вызов функции calculateTotal() со случайным числом возвращает правильное значение
+// ✅ Объявлена переменная apartment
+// ✅ Значение переменной apartment это объект
+// ✅ У объекта переменной apartment присутствуют свойства imgUrl, descr, rating, price и tags со значениями
+// ✅ В объекте apartment есть свойство owner
+// ✅ Значение свойства owner это объект
+// ✅ В объекте owner есть свойство name
+// ✅ Значение свойства name это "Henry"
+// ✅ В объекте owner есть свойство phone
+// ✅ Значение свойства phone это "982-126-1588"
+// ✅ В объекте owner есть свойствао email
+// ✅ Значение свойства email это "henry.carter@aptmail.com"
 
 
-// function calculateTotal(number) {
-// let total = 0;
-//   for (let i = 1; i <= number; i++) {
-//     total += i;
-//   }
-//   return total;
-// }
-// console.log(calculateTotal(1));
-// console.log(calculateTotal(3));
-// console.log(calculateTotal(7));
-// console.log(calculateTotal(18));
-// console.log(calculateTotal(24));
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com"
+//   },
+// };
+// console.log(apartment);
 
 
 
 // ❗ ЗАДАЧА #3
 
-// Дополни код цикла for так, чтобы он последовательно логировал все элементы массива fruits.
+// Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment.
+
+// aptRating - рейтинг;
+// aptDescr - описание;
+// aptPrice - цена;
+// aptTags - теги.
 
 // ТЕСТЫ
 
-// ✅ Объявлена переменная fruits
-// ✅ Значение переменной fruits это массив ["apple", "plum", "pear", "orange"]
-// ✅ Объявлена переменная i - счётчик цикла
-// ✅ Начальное значение переменной i равно 0
-// ✅ Условие цикла приводится к true до тех пор, пока i меньше 4
-// ✅ На каждой итерации значение переменной i увеличивается на единицу
-// ✅ В теле цикла for объявляется переменная const fruit и этой переменной присваивается значение - элемент массива
-// ✅ В теле цикла for используется вывод в консоль переменной fruit
+// ✅ Объявлена переменная apartment
+// ✅ Значение переменной apartment это объект
+// ✅ У объекта переменной apartment присутствуют свойства imgUrl, descr, rating, price и tags со значениями
+// ✅ Объявлена переменная aptRating
+// ✅ Значение переменной aptRating это число 4
+// ✅ Объявлена переменная aptDescr
+// ✅ Значение переменной aptDescr это строка "Spacious apartment in the city center"
+// ✅ Объявлена переменная aptPrice
+// ✅ Значение переменной aptPrice это число 2153
+// ✅ Объявлена переменная aptTags
+// ✅ Значение переменной aptTags это массив строк ["premium", "promoted", "top"]
 
 
-// const fruits = ['apple', 'plum', 'pear', 'orange'];
-// for (let i = 0; i < fruits.length; i += 1) {
-//   const fruit = fruits[i];
-//   console.log(fruit);
-// }
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+// };
+// const aptRating = apartment.rating;
+// const aptDescr = apartment.descr;
+// const aptPrice = apartment.price;
+// const aptTags = apartment.tags;
+// console.log(apartment);
 
 
 
 // ❗ ЗАДАЧА #4
 
-// Напиши функцию calculateTotalPrice(order), которая принимает один параметр order - массив чисел, и рассчитывает общую сумму его элементов. Общая сумма элементов должна сохраняться в переменной total, которая возвращается, как результат работы функции.
+// Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment.
+
+// ownerName - имя владельца;
+// ownerPhone - телефон владельца;
+// ownerEmail - почта владельца;
+// numberOfTags - количество элементов массива в свойстве tags;
+// firstTag - первый элемент массива в свойстве tags;
+// lastTag - последний элемент массива в свойстве tags.
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция calculateTotalPrice(order)
-// ✅ Вызов функции calculateTotalPrice([12, 85, 37, 4]) возвращает 138
-// ✅ Вызов функции calculateTotalPrice([164, 48, 291]) возвращает 503
-// ✅ Вызов функции calculateTotalPrice([412, 371, 94, 63, 176]) возвращает 1116
-// ✅ Вызов функции calculateTotalPrice() со случайным массивом возвращает правильное значение
+// ✅ Объявлена переменная apartment с помощью const
+// ✅ Значение переменной apartment это объект
+// ✅ Объявлена переменная ownerName с помощью const
+// ✅ Значение переменной ownerName это строка "Henry"
+// ✅ Объявлена переменная ownerPhone с помощью const
+// ✅ Значение переменной ownerPhone это "982-126-1588"
+// ✅ Объявлена переменная ownerEmail с помощью const
+// ✅ Значение переменной ownerEmail это "henry.carter@aptmail.com"
+// ✅ Объявлена переменная numberOfTags с помощью const
+// ✅ Значение переменной numberOfTags это 3
+// ✅ Объявлена переменная firstTag с помощью const
+// ✅ Значение переменной firstTag это "premium"
+// ✅ Объявлена переменная lastTag с помощью const
+// ✅ Значение переменной lastTag это "top"
 
 
-// function calculateTotalPrice(order) {
-//   let total = 0;
-// for (let i = 0; i < order.length; i++) {
-//     total += order[i];
-//   }
-//   return total;
-// }
-// console.log(calculateTotalPrice([12, 85, 37, 4]));
-// console.log(calculateTotalPrice([164, 48, 291]));
-// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// const lastTag = apartment.tags[2];
+// console.log(apartment);
+// console.log(ownerName);
+// console.log(ownerPhone);
+// console.log(ownerEmail);
+// console.log(numberOfTags);
+// console.log(firstTag);
+// console.log(lastTag);
 
 
 
 // ❗ ЗАДАЧА #5
 
-// Напиши функцию findLongestWord(string) которая принимает произвольную строку состоящую только из слов разделённых пробелом (параметр string) и возвращает самое длинное слово в этой строке.
+// Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment используя синтаксис «квадратных скобок».
+
+// aptRating - рейтинг;
+// aptDescr - описание;
+// aptPrice - цена;
+// aptTags - теги.
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция findLongestWord(string)
-// ✅ Вызов функции findLongestWord("The quick brown fox jumped over the lazy dog") возвращает jumped
-// ✅ Вызов функции findLongestWord("Google do a roll") возвращает Google
-// ✅ Вызов функции findLongestWord("May the force be with you") возвращает force
-// ✅ Вызов функции findLongestWord() со случайной строкой возвращает правильное значение
+// ✅ Объявлена переменная apartment
+// ✅ Значение переменной apartment это объект
+// ✅ Объявлена переменная aptRating
+// ✅ Значение переменной aptRating это 4
+// ✅ Объявлена переменная aptDescr
+// ✅ Значение переменной aptDescr это "Spacious apartment in the city center"
+// ✅ Объявлена переменная aptPrice
+// ✅ Значение переменной aptPrice это 2153
+// ✅ Объявлена переменная aptTags
+// ✅ Значение переменной aptTags это ["premium", "promoted", "top"]
 
 
-// function findLongestWord(string) {
-// const words = string.split(" ");
-//   let longestWord = words[0];
-//   for (let word of words) {
-//     if (word.length > longestWord.length) {
-//       longestWord = word;
-//     }
-//   }
-//   return longestWord;
-// }
-// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
-// console.log(findLongestWord("Google do a roll"));
-// console.log(findLongestWord("May the force be with you"));
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+// };
+// const aptRating = apartment["rating"];
+// const aptDescr = apartment["descr"];
+// const aptPrice = apartment["price"];
+// const aptTags = apartment["tags"];
+// console.log(apartment);
+// console.log(aptRating);
+// console.log(aptDescr);
+// console.log(aptPrice);
+// console.log(aptTags);
 
 
 
 // ❗ ЗАДАЧА #6
 
-// Дополни код функции createArrayOfNumbers(min, max) так, чтобы она возвращала массив всех целых чисел от значения min до max.
+// Дополни код обновив значения свойств объекта apartment:
+
+// цену в свойстве price на 5000;
+// рейтинг квартиры в свойстве rating на 4.7;
+// имя владельца во вложенном свойстве name на "Henry Sibola";
+// массив тегов в свойстве tags добавив в конец строку "trusted".
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция createArrayOfNumbers(min, max)
-// ✅ Вызов функции createArrayOfNumbers(1, 3) возвращает [1, 2, 3]
-// ✅ Вызов функции createArrayOfNumbers(14, 17) возвращает [14, 15, 16, 17]
-// ✅ Вызов функции createArrayOfNumbers(29, 34) возвращает [29, 30, 31, 32, 33, 34]
-// ✅ Вызов функции createArrayOfNumbers() со случайными min и max возвращает правильный массив
-// ✅ В цикле for использовался метод push
+// ✅ Объявлена переменная apartment
+// ✅ Значение переменной apartment это объект
+// ✅ Значение вложенного свойства price это число 5000
+// ✅ Значение вложенного свойства rating это число 4.7
+// ✅ Значение вложенного свойства name это строка "Henry Sibola"
+// ✅ Значение вложенного свойства tags это массив ["premium", "promoted", "top", "trusted"]
 
 
-// function createArrayOfNumbers(min, max) {
-//   const numbers = [];
-// for (let i = min; i <= max; i++) {
-//     numbers.push(i);
-//   }
-//   return numbers;
-// }
-// console.log(createArrayOfNumbers(1, 3));
-// console.log(createArrayOfNumbers(14, 17));
-// console.log(createArrayOfNumbers(29, 34));
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+// apartment.price = 5000;
+// apartment.rating = 4.7;
+// apartment.owner.name = "Henry Sibola";
+// apartment.tags.push("trusted");
+// console.log(apartment);
 
 
 
 // ❗ ЗАДАЧА #7
 
-// Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
+// Добавь объекту apartment несколько новых свойств:
+
+// area - площадь в квадратных метрах, число 60;
+// rooms - количество комнат, число 3;
+// location - местоположение квартиры, обьект со следующими вложенными свойствами;
+// country - страна, строка "Jamaica";
+// city - город, строка "Kingston".
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция filterArray(numbers, value)
-// ✅ Вызов функции filterArray([1, 2, 3, 4, 5], 3) возвращает [4, 5]
-// ✅ Вызов функции filterArray([1, 2, 3, 4, 5], 4) возвращает [5]
-// ✅ Вызов функции filterArray([1, 2, 3, 4, 5], 5) возвращает []
-// ✅ Вызов функции filterArray([12, 24, 8, 41, 76], 38) возвращает [41, 76]
-// ✅ Вызов функции filterArray([12, 24, 8, 41, 76], 20) возвращает [24, 41, 76]
-// ✅ Вызов функции filterArray() со случайным массивом и числом возвращает правильный массив
-// ✅ В цикле for использовался метод push
+// ✅ Объявлена переменная apartment
+// ✅ Значение переменной apartment это объект
+// ✅ Значение вложенного свойства area это число 60
+// ✅ Значение вложенного свойства rooms это число 3
+// ✅ Значение вложенного свойства location это объект
+// ✅ Значение вложенного свойства location.country это строка "Jamaica"
+// ✅ Значение вложенного свойства location.city это строка "Kingston"
 
 
-// function filterArray(numbers, value) {
-// let filteredArray = [];
-//   for (const number of numbers) {
-//     if (number > value) {
-//       filteredArray.push(number);
-//     }
-//   }
-//   return filteredArray;
-// }
-// console.log(filterArray([1, 2, 3, 4, 5], 3));
-// console.log(filterArray([1, 2, 3, 4, 5], 4));
-// console.log(filterArray([1, 2, 3, 4, 5], 5));
-// console.log(filterArray([12, 24, 8, 41, 76], 38));
-// console.log(filterArray([12, 24, 8, 41, 76], 20));
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ["premium", "promoted", "top", "trusted"],
+//   owner: {
+//     name: "Henry Sibola",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = {
+//   country : "Jamaica",
+//   city : "Kingston",
+// };
+// console.log(apartment);
 
 
 
 // ❗ ЗАДАЧА #8
 
-// Функция checkFruit(fruit) принимает строку с названием фрукта (параметр fruit), и проверяет есть ли такой фрукт в массиве fruits.
-
-// Дополни код функции так, что если:
-
-// фрукт есть в массиве, то функция возвращает true;
-// фрукта нет в массиве, то функция возвращает false.
+// Дополни код объявления объекта так, чтобы у него были свойства name, price, image и tags со значениями из переменных с аналогичными именами. Обязательно используй синтаксис коротких свойств.
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция checkFruit(fruit)
-// ✅ Вызов checkFruit("plum") возвращает true
-// ✅ Вызов checkFruit("mandarin") возвращает false
-// ✅ Вызов checkFruit("pear") возвращает true
-// ✅ Вызов checkFruit("Pear") возвращает false
-// ✅ Вызов checkFruit("apple") возвращает true
-// ✅ Вызов функции checkFruit() со случайным словом возвращает правильное значение boolean
-// ✅ В функции использовался метод includes
+// ✅ Объявлена переменная product
+// ✅ Значение переменной product это объект
+// ✅ Значение вложенного свойства name это строка "Repair Droid"
+// ✅ Значение вложенного свойства price это число 2500
+// ✅ Значение вложенного свойства image это строка "https://via.placeholder.com/640x480"
+// ✅ Значение вложенного свойства tags это массив ["on sale", "trending", "best buy"]
 
 
-// function checkFruit(fruit) {
-//   const fruits = ["apple", "plum", "pear", "orange"];
-//   return fruits.includes(fruit);
-// }
-// console.log(checkFruit("plum"));
-// console.log(checkFruit("mandarin"));
-// console.log(checkFruit("pear"));
-// console.log(checkFruit("Pear"));
-// console.log(checkFruit("apple"));
+// const name = "Repair Droid";
+// const price = 2500;
+// const image = "https://via.placeholder.com/640x480";
+// const tags = ["on sale", "trending", "best buy"];
+// const product = {
+//   name,
+//   price,
+//   image,
+//   tags,
+// };
+// console.log(product);
 
 
 
 // ❗ ЗАДАЧА #9
 
-// Общими элементами массивов называют те элементы, которые присутствуют во всех массивах.
+// Дополни код объявления объекта credentials так, чтобы в результате у него были два свойства: email и password, имена которых хранятся в переменных emailInputName и passwordInputName.
 
-// Например, в двух массивах [1, 3, 5] и [0, 8, 5, 3] общими будут числа 3 и 5, т.к. они присутствуют в обоих исходных массивах. А числа 0, 1 и 8 присутствуют только в одном из массивов.
-
-// Напиши функцию getCommonElements(array1, array2) которая получает два массива произвольной длины в параметры array1 и array2, и возвращает новый массив, состоящий из тех элементов, которые присутствуют в обоих исходных массивах.
+// Значением свойства email должна быть строка "henry.carter@aptmail.com", а значением свойства password - строка "jqueryismyjam".
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция getCommonElements(array1, array2)
-// ✅ Вызов getCommonElements([1, 2, 3], [2, 4]) возвращает [2]
-// ✅ Вызов getCommonElements([1, 2, 3], [2, 1, 17, 19]) возвращает [1, 2]
-// ✅ Вызов getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]) возвращает [12, 27, 3]
-// ✅ Вызов getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]) возвращает [10, 30, 40]
-// ✅ Вызов getCommonElements([1, 2, 3], [10, 20, 30]) возвращает []
-// ✅ Вызов функции getCommonElements() со случайными двумя массивами возвращает правильный массив
-// ✅ В цикле for использовались методы includes и push
+// ✅ Объявлена переменная credentials
+// ✅ Значение переменной credentials это объект
+// ✅ В объекте credentials есть свойство email
+// ✅ Значение вложенного свойства email это строка "henry.carter@aptmail.com"
+// ✅ В объекте credentials есть свойство password
+// ✅ Значение вложенного свойства password это строка "jqueryismyjam"
 
 
-// function getCommonElements(array1, array2) {
-// let commonElements = [];
-//   for (const element of array1) {
-//     if (array2.includes(element)) {
-//       commonElements.push(element);
-//     }
-//   }
-//   return commonElements;
-// }
-// console.log(getCommonElements([1, 2, 3], [2, 4]));
-// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
-// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
-// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
-// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+// const emailInputName = "email";
+// const passwordInputName = "password";
+// const credentials = {
+// [emailInputName]: "henry.carter@aptmail.com",
+//   [passwordInputName]: "jqueryismyjam"
+// };
+// console.log(credentials);
 
 
 
 // ❗ ЗАДАЧА #10
 
-// Выполни рефакторинг кода функции calculateTotalPrice(order) заменив цикл for на for...of.
+// Перебери объект apartment используя цикл for...in и запиши в массив keys все его ключи, а в массив values все значения его свойств.
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция calculateTotalPrice(order)
-// ✅ Вызов функции calculateTotalPrice([12, 85, 37, 4]) возвращает 138
-// ✅ Вызов функции calculateTotalPrice([164, 48, 291]) возвращает 503
-// ✅ Вызов функции calculateTotalPrice([412, 371, 94, 63, 176]) возвращает 1116
-// ✅ Вызов функции calculateTotalPrice([]) возвращает 0
-// ✅ Вызов функции calculateTotalPrice() со случайным массивом чисел возвращает правильную сумму
+// ✅ Объявлена переменная apartment
+// ✅ Значение переменной apartment это объект
+// ✅ Объявлена переменная keys
+// ✅ Значение переменной keys это массив ["descr", "rating", "price"]
+// ✅ Объявлена переменная values
+// ✅ Значение переменной values это массив ["Spacious apartment in the city center", 4, 2153]
 
 
-// function calculateTotalPrice(order) {
-//   let total = 0;
-//   for (const price of order) {
-//     total += price;
-//   }
-//   return total;
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// for (const key in apartment) {
+//   keys.push(key);
+//   values.push(apartment[key]);
 // }
-// console.log(calculateTotalPrice([12, 85, 37, 4]));
-// console.log(calculateTotalPrice([164, 48, 291]));
-// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
-// console.log(calculateTotalPrice([]));
+// console.log(apartment);
+// console.log(keys);
+// console.log(values);
 
 
 
 // ❗ ЗАДАЧА #11
 
-// Выполни рефакторинг функции filterArray(numbers, value) заменив цикл for на for...of.
+// Выполни рефакторинг решения предыдущего задания добавив в цикл for...in проверку на собственное свойство.
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция filterArray(numbers, value)
-// ✅ Вызов функции filterArray([1, 2, 3, 4, 5], 3) возвращает [4, 5]
-// ✅ Вызов функции filterArray([1, 2, 3, 4, 5], 4) возвращает [5]
-// ✅ Вызов функции filterArray([1, 2, 3, 4, 5], 5) возвращает []
-// ✅ Вызов функции filterArray([12, 24, 8, 41, 76], 38) возвращает [41, 76]
-// ✅ Вызов функции filterArray([12, 24, 8, 41, 76], 20) возвращает [24, 41, 76]
-// ✅ Вызов функции filterArray() со случайным массивом и числом возвращает правильный массив
-// ✅ Функция filterArray() использует цикл for..of
+// ✅ Объявлена переменная advert.
+// ✅ Значение переменной advert это объект.
+// ✅ Объявлена переменная apartment.
+// ✅ Значение переменной apartment это объект.
+// ✅ Объявлена переменная keys.
+// ✅ Значение переменной keys это массив ["descr", "rating", "price"].
+// ✅ Объявлена переменная values.
+// ✅ Значение переменной values это массив ["Spacious apartment in the city center", 4, 2153].
 
 
-// function filterArray(numbers, value) {
-//   const filteredNumbers = [];
-//   for (const number of numbers) {
-//     if (number > value) {
-//       filteredNumbers.push(number);
-//     }
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+// for (const key in apartment) {
+// if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);
 //   }
-//   return filteredNumbers;
 // }
-// console.log(filterArray([1, 2, 3, 4, 5], 3));
-// console.log(filterArray([1, 2, 3, 4, 5], 4));
-// console.log(filterArray([1, 2, 3, 4, 5], 5));
-// console.log(filterArray([12, 24, 8, 41, 76], 38));
-// console.log(filterArray([12, 24, 8, 41, 76], 20));
+// console.log(apartment);
 
 
 
 // ❗ ЗАДАЧА #12
 
-// Дополни выражения остатка от деления так, чтобы код проходил тесты.
+// Напиши функцию countProps(object), которая считает и возвращает количество собственных свойств объекта в параметре object. Используй переменную propCount для хранения количества свойств объекта.
 
 // ТЕСТЫ
 
-// ✅ Объявлена переменная a
-// ✅ Значение переменной a это число 0
-// ✅ Объявлена переменная b
-// ✅ Значение переменной b это число 1
-// ✅ Объявлена переменная c
-// ✅ Значение переменной c это число 3
-// ✅ Объявлена переменная d
-// ✅ Значение переменной d это число 5
-// ✅ Объявлена переменная e
-// ✅ Значение переменной e это число 2
+// ✅ Объявлена функция countProps(object)
+// ✅ Вызов countProps({}) возвращает 0
+// ✅ Вызов countProps({ name: "Mango", age: 2 }) возвращает 2
+// ✅ Вызов countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }) возвращает 3
+// ✅ Функция подсчитывает только собственные свойства объекта
 
 
-// const a = 3 % 3;
-// const b = 4 % 3;
-// const c = 11 % 8;
-// const d = 12 % 7;
-// const e = 8 % 6;
-// console.log(a);
-// console.log(b);
-// console.log(c);
-// console.log(d);
-// console.log(e);
+// function countProps(object) {
+//   let propCount = 0;
+// for (const key in object) {
+//     if (object.hasOwnProperty(key)) {
+//       propCount++;
+//     }
+//   }
+//   return propCount;
+// }
+// console.log(countProps({}));
+// console.log(countProps({ name: "Mango", age: 2 }));
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
 
 
 
 // ❗ ЗАДАЧА #13
 
-// Напиши функцию getEvenNumbers(start, end) которая возвращает массив всех чётных чисел от start до end. Чётным считается число которое делится на 2 без остатка (10 % 2 === 0).
+// Перебери объект apartment используя метод Object.keys() и цикл for...of. Запиши в переменную keys массив ключей собственных свойств объекта apartment, и добавь в массив values все значения его свойств.
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция getEvenNumbers(start, end)
-// ✅ Вызов функции getEvenNumbers(2, 5) возвращает [2, 4]
-// ✅ Вызов функции getEvenNumbers(3, 11) возвращает [4, 6, 8, 10]
-// ✅ Вызов функции getEvenNumbers(6, 12) возвращает [6, 8, 10, 12]
-// ✅ Вызов функции getEvenNumbers(8, 8) возвращает [8]
-// ✅ Вызов функции getEvenNumbers(7, 7) возвращает []
-// ✅ Вызов функции getEvenNumbers() со случайными start и end возвращает правильный массив
+// ✅ Объявлена переменная apartment.
+// ✅ Значение переменной apartment это объект.
+// ✅ Объявлена переменная keys.
+// ✅ Значение переменной keys это массив ["descr", "rating", "price"].
+// ✅ Значение переменной keys получено с помощью метода Object.keys().
+// ✅ Объявлена переменная values.
+// ✅ Значение переменной values это массив ["Spacious apartment in the city center", 4, 2153].
+// ✅ Значение переменной values получено с помощью цикла for...of.
 
 
-// function getEvenNumbers(start, end) {
-// const result = [];
-//   for (let i = start; i <= end; i++) {
-//     if (i % 2 === 0) {
-//       result.push(i);
-//     }
-//   }
-//   return result;
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// const keys = Object.keys(apartment);
+// for (const key of keys) {
+//   values.push(apartment[key]);
 // }
-// console.log(getEvenNumbers(2, 5));
-// console.log(getEvenNumbers(3, 11));
-// console.log(getEvenNumbers(6, 12));
-// console.log(getEvenNumbers(8, 8));
-// console.log(getEvenNumbers(7, 7));
+// console.log(apartment);
+// console.log(keys);
+// console.log(values);
 
 
 
 // ❗ ЗАДАЧА #14
 
-// Дополни код так, чтобы в переменную number записывалось первое число от start до end, которое делится на 5 без остатка.
+// Выполни рефакторинг функции countProps(object) используя метод Object.keys() и, возможно, но необязательно, цикл for...of.
 
 // ТЕСТЫ
 
-// ✅ Объявлена переменная start со значением 6
-// ✅ Объявлена переменная end со значением 27
-// ✅ Объявлена переменная number без инициализации
-// ✅ Итоговое значение переменной number равно 10
-// ✅ В цикле for используется break для выхода до завершения всех итераций цикла
+// ✅ Объявлена функция countProps(object)
+// ✅ Вызов countProps({}) возвращает 0
+// ✅ Вызов countProps({ name: "Mango", age: 2 }) возвращает 2
+// ✅ Вызов countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }) возвращает 3
+// ✅ Функция подсчитывает только собственные свойства объекта
+// ✅ Функция использует метод Object.keys() и, возможно, цикл for...of
 
 
-// const start = 6;
-// const end = 27;
-// let number;
-// for (let i = start; i < end; i += 1) {
-//   if (i % 5 === 0) {
-//     number = i;
-//     break;
+// function countProps(object) {
+//  let propCount = 0;
+//   for (const key of Object.keys(object)) {
+//     propCount += 1;
 //   }
+//   return propCount;
 // }
-// console.log(number);
+// console.log(countProps({}));
+// console.log(countProps({ name: "Mango", age: 2 }));
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
 
 
 
 // ❗ ЗАДАЧА #15
 
-// Выполни рефакторинг функции findNumber(start, end, divisor) так, чтобы она:
-
-// возвращала первое число от start до end, которое делится на divisor без остатка
-// не использовала оператор break
-// не использовала переменную number
+// Запиши в переменную keys массив ключей собственных свойств объекта apartment, а в переменную values массив всех значений его свойств. Используй методы Object.keys() и Object.values().
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция findNumber(start, end, divisor)
-// ✅ Вызов findNumber(2, 6, 5) возвращает 5
-// ✅ Вызов findNumber(8, 17, 3) возвращает 9
-// ✅ Вызов findNumber(6, 9, 4) возвращает 8
-// ✅ Вызов findNumber(16, 35, 7) возвращает 21
-// ✅ Вызов findNumber() со случайным набором чисел возвращает верный результат
-// ✅ В цикле for не должен использоваться break для выхода до завершения всех итераций цикла
+// ✅ Объявлена переменная apartment
+// ✅ Значение переменной apartment это объект
+// ✅ Объявлена переменная keys
+// ✅ Значение переменной keys это массив ["descr", "rating", "price"]
+// ✅ Объявлена переменная values
+// ✅ Значение переменной values это массив ["Spacious apartment in the city center", 4, 2153]
+// ✅ Для получения массива ключей объекта apartment используется Object.keys()
+// ✅ Для получения массива значений объекта apartment используется Object.values()
 
 
-// function findNumber(start, end, divisor) {
-//   for (let i = start; i <= end; i++) {
-//     if (i % divisor === 0) {
-//       return i;
-//     }
-//   }
-//   return null;
-// }
-// console.log(findNumber(2, 6, 5));
-// console.log(findNumber(8, 17, 3));
-// console.log(findNumber(6, 9, 4));
-// console.log(findNumber(16, 35, 7));
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = Object.keys(apartment);
+// const values = Object.values(apartment);
+// console.log(apartment);
+// console.log(keys);
+// console.log(values);
 
 
 
 // ❗ ЗАДАЧА #16
 
-// Напиши функцию includes(array, value), которая делает тоже самое, что и метод массива массив.includes(значение) - проверяет, есть ли в массиве array значение value, возвращая true если есть и false в противном случае.
-
-// При выполнении этой задачи в теле функции includes() нельзя использовать метод массив.includes(значение).
+// Напиши функцию countTotalSalary(salaries) которая принимает объект зарплат, где имя свойства это имя сотрудника, а значение свойства это зарплата. Функция должна рассчитать общую сумму зарплат сотрудников и вернуть её. Используй переменную totalSalary для хранения общей суммы зарплаты.
 
 // ТЕСТЫ
 
-// ✅ Объявлена функция includes(array, value)
-// ✅ Вызов includes([1, 2, 3, 4, 5], 3) возвращает true
-// ✅ Вызов includes([1, 2, 3, 4, 5], 17) возвращает false
-// ✅ Вызов includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") возвращает true
-// ✅ Вызов includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") возвращает false
-// ✅ Вызов includes(["apple", "plum", "pear", "orange"], "plum") возвращает true
-// ✅ Вызов includes(["apple", "plum", "pear", "orange"], "kiwi") возвращает false
-// ✅ Вызов includes() для случайного массива со случайным value возвращает верный boolean
-// ✅ В функции includes используется for, return, но не метод массива includes
+// ✅ Объявлена функция countTotalSalary(salaries)
+// ✅ Вызов countTotalSalary({}) возвращает 0
+// ✅ Вызов countTotalSalary({ mango: 100, poly: 150, alfred: 80 }) возвращает 330
+// ✅ Вызов countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }) возвращает 400
+// ✅ Функция учитывает только собственные свойства объекта
 
 
-// function includes(array, value) {
-// for (const element of array) {
-//     if (element === value) {
-//       return true;
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+// for (const salary of Object.values(salaries)) {
+//     totalSalary += salary;
+//   }
+//   return totalSalary;
+// }
+// console.log(countTotalSalary({}));
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+
+
+// ❗ ЗАДАЧА #17
+
+// Перебери массив объектов colors используя цикл for...of. Добавь в массив hexColors значения свойств hex, а в массив rgbColors значения свойств rgb из всех объектов массива colors.
+
+// ТЕСТЫ
+
+// ✅ Объявлена переменная colors
+// ✅ Значение переменной colors это массив
+// ✅ Объявлена переменная hexColors
+// ✅ Значение переменной hexColors это массив ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]
+// ✅ Объявлена переменная rgbColors
+// ✅ Значение переменной rgbColors это массив ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]
+
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+// const hexColors = [];
+// const rgbColors = [];
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+// console.log(colors);
+// console.log(hexColors);
+// console.log(rgbColors);
+
+
+
+// ❗ ЗАДАЧА #18
+
+// Напиши функцию getProductPrice(productName) которая принимает один параметр productName - название продукта. Функция ищет объект продукта с таким именем (свойство name) в массиве products и возвращает его цену (свойство price). Если продукт с таким названием не найден, функция должна возвращать null.
+
+// ТЕСТЫ
+
+// ✅ Объявлена функция getProductPrice(productName).
+// ✅ Вызов getProductPrice("Radar") возвращает 1300.
+// ✅ Вызов getProductPrice("Grip") возвращает 1200.
+// ✅ Вызов getProductPrice("Scanner") возвращает 2700.
+// ✅ Вызов getProductPrice("Droid") возвращает 400.
+// ✅ Вызов getProductPrice("Engine") возвращает null.
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+// function getProductPrice(productName) {
+// for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price;
 //     }
 //   }
-//   return false;
+//   return null;
 // }
-// console.log(includes([1, 2, 3, 4, 5], 3));
-// console.log(includes([1, 2, 3, 4, 5], 17));
-// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
-// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
-// console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
-// console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
+// console.log(getProductPrice("Radar"));
+// console.log(getProductPrice("Grip"));
+// console.log(getProductPrice("Scanner"));
+// console.log(getProductPrice("Droid"));
+// console.log(getProductPrice("Engine"));
+
+
+
+// ❗ ЗАДАЧА #19
+
+// Напиши функцию getAllPropValues(propName) которая принимает один параметр propName - имя (ключ) свойства. Функция должна вернуть массив всех значений свойства с таким именем из каждого объекта в массиве products. Если в объектах нет свойства с таким именем, функция должна вернуть пустой массив.
+
+// ТЕСТЫ
+
+// ✅ Объявлена функция getAllPropValues(propName)
+// ✅ Вызов getAllPropValues("name") возвращает ["Radar", "Scanner", "Droid", "Grip"]
+// ✅ Вызов getAllPropValues("quantity") возвращает [4, 3, 7, 9]
+// ✅ Вызов getAllPropValues("price") возвращает [1300, 2700, 400, 1200]
+// ✅ Вызов getAllPropValues("category") возвращает []
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//  let propValues = [];
+//     for (const product of products) {
+//         if (propName in product) {
+//             propValues.push(product[propName]);
+//         }
+//     }
+//     return propValues;
+// }
+// console.log(getAllPropValues("name"));
+// console.log(getAllPropValues("quantity"));
+// console.log(getAllPropValues("price"));
+// console.log(getAllPropValues("category"));
+
+
+
+// ❗ ЗАДАЧА #20
+
+// Напиши функцию calculateTotalPrice(productName) которая принимает один параметр productName - название товара. Функция должна вернуть общую стоимость (цена * количество) товара с таким именем из массива products.
+
+// ТЕСТЫ
+
+// ✅ Объявлена функция calculateTotalPrice(productName)
+// ✅ Вызов calculateTotalPrice("Blaster") возвращает 0
+// ✅ Вызов calculateTotalPrice("Radar") возвращает 5200
+// ✅ Вызов calculateTotalPrice("Droid") возвращает 2800
+// ✅ Вызов calculateTotalPrice("Grip") возвращает 10800
+// ✅ Вызов calculateTotalPrice("Scanner") возвращает 8100
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+// for (const product of products) {
+//         if (product.name === productName) {
+//             return product.price * product.quantity;
+//         }
+//     }
+//     return 0;
+// }
+// console.log(calculateTotalPrice("Blaster"));
+// console.log(calculateTotalPrice("Radar"));
+// console.log(calculateTotalPrice("Droid"));
+// console.log(calculateTotalPrice("Grip"));
+// console.log(calculateTotalPrice("Scanner"));
